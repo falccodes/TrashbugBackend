@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Trash Images</title>
+<h2>Images with Trash</h2>
+{% if filenames %}
+	{% for filename in filenames %}
+		<div>
+			<img src="{{ url_for('display_image', filename=filename) }}" height=20% width=20%>
+		</div>
+	{% endfor %}
+{% endif %}
